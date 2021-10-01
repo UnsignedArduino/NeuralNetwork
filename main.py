@@ -42,7 +42,7 @@ for round in range(2000):
             best = network_index
         fitnesses[network_index] = 0
     best_network = networks[elitists[0]]
-    if round % 10 == 0:
+    if round % 100 == 0:
         print(f"Round {round} highest fitness: {highest}")
     if highest > best_ever_fitness:
         best_ever_fitness = highest

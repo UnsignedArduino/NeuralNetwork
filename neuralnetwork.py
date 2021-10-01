@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from math import e
-from copy import deepcopy
 from random import random, uniform as randfloat
 
 
@@ -211,7 +210,7 @@ class NeuralNetwork:
         :param parent2: The other parent.
         :return: Another neural network.
         """
-        child = deepcopy(parent1)
+        child = parent1
         for layer_index, layer in enumerate(self.layers):
             for neuron_index, neuron in enumerate(layer.neurons):
                 conns = parent2.layers[layer_index].neurons[neuron_index].connections
